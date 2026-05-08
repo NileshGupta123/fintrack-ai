@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!-- Favicon — inline SVG so no extra file needed -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%238b5cf6'/><stop offset='100%25' stop-color='%2306b6d4'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><polyline points='20,65 38,45 55,55 80,30' fill='none' stroke='white' stroke-width='9' stroke-linecap='round' stroke-linejoin='round'/></svg>"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta -->
+    <title>FinTrack AI — Smart Finance Management</title>
+    <meta
+      name="description"
+      content="FinTrack AI is a smart finance dashboard with role-based access control, transaction management, and AI-powered insights using Groq."
+    />
+    <meta name="author" content="FinTrack AI" />
+    <meta
+      name="keywords"
+      content="finance, dashboard, AI, expense tracker, income tracker, Groq, analytics"
+    />
+
+    <!-- Open Graph — looks good when shared on WhatsApp, LinkedIn etc -->
+    <meta property="og:title" content="FinTrack AI — Smart Finance Management" />
+    <meta
+      property="og:description"
+      content="Manage your finances smarter with AI-powered insights, natural language search, and auto-categorization."
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- Theme color — browser tab color on mobile -->
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Fonts — Inter for clean modern look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Page load styles — prevents flash of unstyled content */
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #0f172a;
+        color: #f1f5f9;
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* Initial loading screen before React mounts */
+      #root:empty::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0f172a;
+      }
+
+      /* Smooth scrollbar */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #334155 #0f172a;
+      }
+      *::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      *::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      *::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 3px;
+      }
+      *::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+
+      /* Apply Inter to everything */
+      * {
+        font-family: 'Inter', sans-serif;
+      }
+
+      /* JetBrains Mono for code/numbers */
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace !important;
+      }
+
+      /* Selection color */
+      ::selection {
+        background: #7c3aed40;
+        color: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
